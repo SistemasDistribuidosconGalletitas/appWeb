@@ -15,6 +15,7 @@
               label="ID de la receta"
               placeholder="Escriba id"
               v-model="user.idReceta"
+              disabled
             >
             </base-input>
           </b-col>
@@ -24,6 +25,7 @@
               label="Nombre del medico"
               placeholder="medico"
               v-model="user.medico"
+              disabled
             ></base-input>
           </b-col>
            
@@ -33,6 +35,7 @@
               label="Fecha de la consulta"
               placeholder="Consulta"
               v-model="user.fechaConsulta"
+              disabled
             >
             </base-input>
           </b-col>
@@ -45,6 +48,7 @@
               label="Fecha de inicio del medicamento"
               placeholder="Escriba cuando empezar el medicamento"
               v-model="user.recetaFechaInicio"
+              disabled
             >
             </base-input>
           </b-col>
@@ -54,6 +58,7 @@
               label="Fecha de termino del medicamento"
               placeholder="Escriba cuando se debe acaber el medicamento"
               v-model="user.recetaFechaFin"
+              disabled
             >
             </base-input>
           </b-col>
