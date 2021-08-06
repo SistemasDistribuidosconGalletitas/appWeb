@@ -147,12 +147,23 @@ export default {
           .get(path)
           .then((response) => {
             this.medicamentos =response.data;
+            this.modificarMedicamentos();
             console.log(this.medicamentos);
           })
            .catch((error) => {
           console.log(error);
         });
         },
+      modificarMedicamentos(){
+        for(var i=0; i<=this.medicamentos.length-1; i++){
+            var auxiliar;
+            var auxiliar2;
+            auxiliar = this.medicamentos[i].fechaInicio.toString();
+            auxiliar2 = this.medicamentos[i].fechaFin.toString();
+            this.medicamentos[i].fechaInicio = auxiliar.substring(0,10);
+            this.medicamentos[i].fechaFin = auxiliar2.substring(0,10);
+        }
+      }
   }
 };
 </script>

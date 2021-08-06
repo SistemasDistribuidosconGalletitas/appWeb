@@ -5,7 +5,7 @@
       <template slot="links">
         <sidebar-item
           :link="{
-            name: 'Dashboard',
+            name: 'Inicio',
             path: '/dashboard',
             icon: 'ni ni-tv-2 text-primary',
           }"
@@ -14,7 +14,7 @@
 
         <sidebar-item
             :link="{
-              name: 'Icons',
+              name: 'Medicamentos',
               path: '/icons',
               icon: 'ni ni-planet text-blue'
               }"
@@ -23,26 +23,10 @@
 
         <sidebar-item
               :link="{
-                name: 'VERpacientes',
+                name: 'Pacientes',
                 path: '/verPacientes',
                 icon: 'ni ni-single-02 text-blue'
               }">
-        </sidebar-item>
-
-        <sidebar-item
-              :link="{
-                name: 'CITAS',
-                path: '/receta',
-                icon: 'ni ni-bullet-list-67'
-                }">
-        </sidebar-item>
-
-         <sidebar-item
-              :link="{
-                name: 'PRUEBAS',
-                path: '/medicamento',
-                icon: 'ni ni-bullet-list-67'
-                }">
         </sidebar-item>
 
       </template>
