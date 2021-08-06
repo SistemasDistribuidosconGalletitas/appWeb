@@ -71,13 +71,11 @@
                 <b-button class="m-1" 
                 @click="obtenerMedicamento()" 
                 type="submit" 
+                variant="outline-purple"
                 style="color: #7952b3;" 
                 > Ver medicamentos</b-button>
               </b-row>
     </b-form>
- 
-
-
         <b-card id="tarjet" bg-variant="white"
              text-variant="black" 
              class="p-2 mb-4 bg-white rounded cardText"
@@ -85,13 +83,13 @@
              v-bind:key="medicamento.id"
             >
                 <b-card-title><h3> {{medicamento.nombre}}</h3></b-card-title>
-                 <b-row align-v="center" class="card-item"> 
-                  <b-col align="center" cols="10" md="10" lg="2" xl="2">
+                 <b-row align-v="left" class="card-item"> 
+                  <b-col align="left" cols="6" md="8" lg="2" xl="2">
                   <span class="rounded-circle">
                   <b-img id="icono" src="https://e7.pngegg.com/pngimages/12/979/png-clipart-medical-prescription-computer-icons-pharmaceutical-drug-others-miscellaneous-text.png"></b-img>
                   </span>
                    </b-col>
-                    <b-col cols="6" lg="3" xl="4">
+                    <b-col cols="6" lg="3" xl="3">
                       <b-row>
                   <b-icon id="iconos" icon="calendar2-check-fill"  variant="primary" style="margin: 7px"
                   ></b-icon> Fecha de inicio: <br> {{medicamento.fechaInicio}}
@@ -185,5 +183,8 @@ export default {
 #iconos{
   width: 0.5cm ;
   height: 0.5cm;
+}
+.label{
+  font-size: 20px;
 }
 </style>

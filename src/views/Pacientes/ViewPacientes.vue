@@ -36,22 +36,12 @@
                   </b-col>
                  <b-col align-self="center" cols="12" lg="3" xl="2">
                 <b-button
-                  size="sm"
-                  href="#/receta" block
-                  variant="modificar"
+                 
+                  href="#/verrecetas" block
+                  squared variant="success"
                    @click="modificarReceta(receta.idReceta)">
                   <b-icon icon="pencil-fill"></b-icon> Receta</b-button
                 >
-                <b-button
-               
-                  size="sm"
-                  block
-                  variant="eliminar"
-                  ref="popover"
-                >
-                  <b-icon icon="trash-fill"></b-icon>
-                  Eliminar
-                </b-button>
                 <b-popover  placement>
                   <template>
                     <b-button

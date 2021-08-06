@@ -48,6 +48,12 @@ const routes = [
         name: 'medicamento',
         component: () => import(/* webpackChunkName: "demo" */ '../views/Pacientes/Medicamento.vue')
       }
+      ,
+      {
+        path: '/verRecetas',
+        name: 'verrecetas',
+        component: () => import(/* webpackChunkName: "demo" */ '../views/Pacientes/ViewRecetas.vue')
+      }
     ]
   },
   {

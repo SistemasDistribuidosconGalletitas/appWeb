@@ -255,12 +255,13 @@
                     .navbar-brand {
                         display: block;
                         text-align: center;
-                        padding-top: (2rem - $navbar-padding-y);
-                        padding-bottom: (2rem - $navbar-padding-y);
+                        padding-top: (0.5rem - $navbar-padding-y);
+                        padding-bottom: (0.1rem - $navbar-padding-y);
                     }
 
                     .navbar-brand-img {
-                        max-height: 2.5rem;
+                        max-height: 10rem;
+                       
                     }
 
                     // Navbar user
