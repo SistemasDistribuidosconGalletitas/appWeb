@@ -13,7 +13,7 @@
              v-for="receta in recetass"
              v-bind:key="receta.idReceta"
             >
-                <b-card-title><h3> RECETA MEDICA</h3></b-card-title>
+                <b-card-title><h3> RECETA MEDICA {{receta.idReceta}} </h3></b-card-title>
                  <b-row align-v="center" class="card-item"> 
                   <b-col align="center" cols="10" md="10" lg="2" xl="3">
                   <span class="rounded-circle">
@@ -33,11 +33,11 @@
                   <b-col cols="5" lg="3" xl="2">
                     <b-row>
                       <b-icon id="iconos" icon="file-text-fill" variant="primary" style="margin: 7px"
-                      ></b-icon>  Fecha  de incio: <br>{{receta.recetaFechaInicio}} 
+                      ></b-icon>  Fecha  de incio: <br>{{receta.recetafechaInicio}} 
                       </b-row>
                       <b-row>
                         <b-icon id="iconos" icon="file-text-fill" variant="primary" style="margin: 7px"
-                        ></b-icon> Fecha de fin: <br>{{receta.recetaFechaFin}}
+                        ></b-icon> Fecha de fin: <br>{{receta.recetafechaFin}}
                       </b-row>
                   </b-col>
                  <b-col  cols="5" lg="3" xl="2">
@@ -48,12 +48,13 @@
               </b-col>
               <b-col  cols="7" lg="2" xl="2">
                 <b-button
-                  
-                  href="#/receta" block
+                  @click="verMedi(receta.idReceta)"
+                 
                    type="submit" 
                 style="color: #7952b3;" 
                    >
-                  <b-icon icon="pencil-fill"></b-icon> Detalles</b-button
+                  <b-icon icon="pencil-fill"></b-icon
+                  > Detalles</b-button
                 >
               </b-col>
                  </b-row> 
@@ -74,7 +75,7 @@ export default {
       recetass: [],
     };
   },
-  props: ["id"],
+  
   methods: {
      obtenerReceta(){
           const path = "https://sistema-medico-app.herokuapp.com/api/ssm/recetas/26";
@@ -88,7 +89,9 @@ export default {
           console.log(error);
         });
         },
-
+      verMedi(id){
+        this.$router.push(`/receta/${id}`);
+      },
       modificarMedicamentos(){
         for(var i=0; i<=this.medicamentos.length-1; i++){
             var auxiliar;

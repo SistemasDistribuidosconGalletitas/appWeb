@@ -19,7 +19,7 @@
              :per-page="porPagina"
             >
             
-                <b-card-title><h3> Nombre paciente: Cristhian Enrique Olivares Lara </h3></b-card-title>
+                <b-card-title><h3> Nombre paciente: Alan Perez Taylor </h3></b-card-title>
                  <b-row align-v="center" class="card-item"> 
                   <b-col align="center" cols="12" md="12" lg="2" xl="2">
                   <span class="rounded-circle">
@@ -29,10 +29,10 @@
 
                     <b-col cols="12" lg="3" xl="3">
                   <b-icon id="iconos" icon="cash-stack"
-                  ></b-icon> Contacto de urgencia: Josué Idahir
+                  ></b-icon> Correo electronico : alan@gmail.com
                 </b-col>
                   <b-col align-self="center" lg="4" xl="5">
-                      <b-icon id="iconos" icon="card-text"></b-icon> Telefono de urgencia: 288-123-32-32
+                      <b-icon id="iconos" icon="card-text"></b-icon> Telefono : 288-234-32-12
                   </b-col>
                  <b-col align-self="center" cols="12" lg="3" xl="2">
                 <b-button
@@ -82,7 +82,7 @@
 props: ["id"],
 methods: {
 modificarReceta(id) {
-          this.$router.push(`https://sistema-medico-app.herokuapp.com/api/ssm/recetas/25`);
+          this.$router.push(`https://sistema-medico-app.herokuapp.com/api/ssm/recetas/26`);
         },
 }
  }

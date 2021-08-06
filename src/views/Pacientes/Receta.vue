@@ -1,81 +1,7 @@
 <template >
 <card id="carta">
- 
-    <b-form>
-        <b-row>
-      <h1 class="mb-0">Receta Medica</h1>
-      
-        </b-row>
-        <hr>
-      <div class="pl-lg-4">
-        <b-row>
-          <b-col lg="4">
-            <base-input
-              type="text"
-              label="ID de la receta"
-              placeholder="Escriba id"
-              v-model="user.idReceta"
-              disabled
-            >
-            </base-input>
-          </b-col>
-          <b-col lg="4">
-            <base-input
-              type="text"
-              label="Nombre del medico"
-              placeholder="medico"
-              v-model="user.medico"
-              disabled
-            ></base-input>
-          </b-col>
-           
-             <b-col lg="4">
-            <base-input
-              type="text"
-              label="Fecha de la consulta"
-              placeholder="Consulta"
-              v-model="user.fechaConsulta"
-              disabled
-            >
-            </base-input>
-          </b-col>
-        </b-row>
-          
-        <b-row >
-          <b-col lg="6">
-            <base-input
-              type="text"
-              label="Fecha de inicio del medicamento"
-              placeholder="Escriba cuando empezar el medicamento"
-              v-model="user.recetaFechaInicio"
-              disabled
-            >
-            </base-input>
-          </b-col>
-          <b-col lg="6">
-            <base-input
-              type="text"
-              label="Fecha de termino del medicamento"
-              placeholder="Escriba cuando se debe acaber el medicamento"
-              v-model="user.recetaFechaFin"
-              disabled
-            >
-            </base-input>
-          </b-col>
-        </b-row>
-       <b-row >       
-        </b-row>
-      </div>
-     <b-row aling="rigth">
-              <b-col></b-col>
-                <b-button class="m-1" 
-                @click="obtenerMedicamento()" 
-                type="submit" 
-                variant="outline-purple"
-                style="color: #7952b3;" 
-                > Ver medicamentos</b-button>
-              </b-row>
-    </b-form>
+    <h1 class="mb-0">Medicamentos de la receta: </h1>
+    <hr>
         <b-card id="tarjet" bg-variant="white"
              text-variant="black" 
              class="p-2 mb-4 bg-white rounded cardText"
@@ -132,8 +58,9 @@ export default {
   name: "verRecetas",
   data() {
     return {
+      idR: this.$route.params.id,
       user: {
-        idReceta: '1',
+        idReceta: '4',
         fechaConsulta: '2021-08-05',
         recetaFechaInicio: '2021-08-10',
         recetaFechaFin: '2021-08-05',
@@ -142,10 +69,9 @@ export default {
       medicamentos: [],
     };
   },
-  props: ["id"],
   methods: {
      obtenerMedicamento(){
-          const path = "https://sistema-medico-app.herokuapp.com/api/ssm/medicamentos/receta/1";
+          const path = `https://sistema-medico-app.herokuapp.com/api/ssm/medicamentos/${this.idR}`;
           axios
           .get(path)
           .then((response) => {
@@ -157,6 +83,7 @@ export default {
           console.log(error);
         });
         },
+        
       modificarMedicamentos(){
         for(var i=0; i<=this.medicamentos.length-1; i++){
             var auxiliar;
@@ -167,6 +94,9 @@ export default {
             this.medicamentos[i].fechaFin = auxiliar2.substring(0,10);
         }
       }
+  },
+  created(){
+      this.obtenerMedicamento();
   }
 };
 </script>
