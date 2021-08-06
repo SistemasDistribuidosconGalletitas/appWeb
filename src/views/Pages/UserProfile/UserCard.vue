@@ -36,9 +36,9 @@
           </div>
         </b-col>
       </b-row>
-      <div class="text-center">
+      <div class="text-rigth">
         <h5 class="h3">
-          Jessica Jones<span class="font-weight-light">, 27</span>
+          Jessica Jones
         </h5>
         <div class="h5 font-weight-300">
           <i class="ni location_pin mr-2"></i>Bucharest, Romania

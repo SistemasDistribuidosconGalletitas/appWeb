@@ -1,16 +1,13 @@
 <template >
+<card id="carta">
  <div >
    <br />
     <b-container fluid>
      <div >
-       </div>
-       <div>
- <h1 class="mb-3">Pacientes</h1>
- <b-row>
-
- </b-row></div>
-        <b-jumbotron  bg-variant="white" class="shadow-lg p-5 mb-5 bg-white rounded"
-           >
+      
+ <b><h1 class="mb-3">Pacientes</h1></b>
+ </div>
+        <hr>
         <b-card id="tarjet" bg-variant="white"
              text-variant="black" 
              class="p-3 mb-5 bg-white rounded cardText"
@@ -59,9 +56,10 @@
                
          </b-card>
 
-        </b-jumbotron>
+      
   </b-container>
   </div> 
+</card>
 </template>
 
 <script>
@@ -101,5 +99,9 @@ modificarReceta(id) {
 #tarjet{
   box-shadow: 3px 5px 12px 3px gray;
   border-radius: 10px, 10px, 10px, 10px;
+}
+#carta {
+  
+  background-color: #4CC5EA;
 }
 </style>

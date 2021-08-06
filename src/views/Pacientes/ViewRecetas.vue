@@ -4,9 +4,8 @@
    <br />
        <b-row>
  <h1 class="mb-3">Recetas del paciente</h1>
+ 
 </b-row>
-       
-
         <b-card id="tarjet" bg-variant="white"
              text-variant="black" 
              class="p-2 mb-4 bg-white rounded cardText"
@@ -17,7 +16,7 @@
                  <b-row align-v="center" class="card-item"> 
                   <b-col align="center" cols="10" md="10" lg="2" xl="3">
                   <span class="rounded-circle">
-                  <b-img id="icono" src="https://e7.pngegg.com/pngimages/12/979/png-clipart-medical-prescription-computer-icons-pharmaceutical-drug-others-miscellaneous-text.png"></b-img>
+                  <b-img id="icono" src="img/theme/testamento.png"></b-img>
                   </span>
                    </b-col>
                     <b-col cols="5" lg="3" xl="3">
@@ -114,7 +113,7 @@ export default {
   background-color: #4CC5EA;
 }
 #icono{
-  width: 3.2cm ;
+  width: 3cm ;
   height: 2cm;
 }
 #iconos{
